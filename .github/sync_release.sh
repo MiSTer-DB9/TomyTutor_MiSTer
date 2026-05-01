@@ -12,7 +12,7 @@ CORE_NAME=(TomyTutor)
 MAIN_BRANCH="main"
 COMPILATION_INPUT=(TomyTutor.qpf)
 COMPILATION_OUTPUT=(output_files/TomyTutor.rbf)
-QUARTUS_IMAGE="theypsilon/quartus-lite-c5:17.0.docker0"
+QUARTUS_IMAGE="theypsilon/quartus-lite-c5:17.0.2.docker0"
 
 # [MiSTer-DB9 BEGIN] - fork-only cores have no upstream; sync_release is a no-op
 if [[ -z "${UPSTREAM_REPO}" ]]; then
