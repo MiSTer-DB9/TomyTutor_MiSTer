@@ -340,10 +340,10 @@ wire        status_update;
 // [MiSTer-DB9 BEGIN] - DB9/SNAC8 support
 wire [31:0] joy0_USB, joy1_USB;
 wire [31:0] joy0 = joydb_1ena ?
-    (OSD_STATUS ? 32'b0 : {23'b0, joydb_1[6], joydb_1[11], joydb_1[10], joydb_1[5:4], joydb_1[3:0]})
+    (OSD_STATUS ? 32'b0 : joydb_1_mapped[8:0])
     : joy0_USB;
 wire [31:0] joy1 = joydb_2ena ?
-    (OSD_STATUS ? 32'b0 : {23'b0, joydb_2[6], joydb_2[11], joydb_2[10], joydb_2[5:4], joydb_2[3:0]})
+    (OSD_STATUS ? 32'b0 : joydb_2_mapped[8:0])
     : joydb_1ena ? joy0_USB : joy1_USB;
 // [MiSTer-DB9 END]
 wire [10:0] ps2_key;
